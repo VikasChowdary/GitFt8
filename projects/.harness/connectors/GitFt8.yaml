@@ -1,0 +1,24 @@
+connector:
+  name: GitFt8
+  identifier: GitFt8
+  description:
+  orgIdentifier: default
+  projectIdentifier: GitFt8
+  type: Github
+  spec:
+    url: https://github.com/VikasChowdary/GitFt8
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
+        spec:
+          username: Vikas
+          tokenRef: account.patForGithub
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: account.patForGithub
+    delegateSelectors:
+    - acctgroup
+    executeOnDelegate: true
+    type: Repo
